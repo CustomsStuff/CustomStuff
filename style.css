@@ -148,6 +148,44 @@ body {
 
 .zoomable:hover {
     transform: scale(1.2); /* Powiększenie zdjęcia */
+let currentImageIndex = 0;
+let imagesList = [];
+
+function openModal(imgElement) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+
+    // Pobierz listę zdjęć: główne + dodatkowe
+    const mainImage = imgElement.src;
+    const additionalImages = imgElement.getAttribute("data-images").split(",");
+    imagesList = [mainImage, ...additionalImages];
+    currentImageIndex = 0;
+
+    // Wyświetl pierwsze zdjęcie (główne)
+    modalImg.src = imagesList[currentImageIndex];
+}
+
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+    imagesList = [];
+}
+
+function showNextImage() {
+    if (imagesList.length > 0) {
+        currentImageIndex = (currentImageIndex + 1) % imagesList.length; // Zapętlenie
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = imagesList[currentImageIndex];
+    }
+}
+
+function showPreviousImage() {
+    if (imagesList.length > 0) {
+        currentImageIndex = (currentImageIndex - 1 + imagesList.length) % imagesList.length; // Zapętlenie
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = imagesList[currentImageIndex];
+    }
 }
 .modal .prev, .modal .next {
     cursor: pointer;
