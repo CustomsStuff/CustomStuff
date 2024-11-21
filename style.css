@@ -149,20 +149,27 @@ body {
 .zoomable:hover {
     transform: scale(1.2); /* Powiększenie zdjęcia */
 }
-.toggle-image {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #008000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+.modal .prev, .modal .next {
     cursor: pointer;
-    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -20px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
 }
 
-.toggle-image:hover {
-    background-color: #005500;
+.modal .prev {
+    left: 10px;
+}
+
+.modal .next {
+    right: 10px;
+}
+
+.modal .prev:hover, .modal .next:hover {
+    color: #ccc;
 }
