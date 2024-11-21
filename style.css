@@ -149,3 +149,20 @@ body {
 .zoomable:hover {
     transform: scale(1.2); /* Powiększenie zdjęcia */
 }
+.toggle-image {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-image:hover {
+    background-color: #005500;
+}
