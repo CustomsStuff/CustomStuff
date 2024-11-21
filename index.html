@@ -111,5 +111,22 @@
             <p>&copy; 2024 CustomStuff. All rights reserved.</p>
         </div>
     </footer>
+
+<script>
+    // Otwórz modal i pokaż kliknięte zdjęcie
+    function openModal(src) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modal.style.display = "block";
+        modalImg.src = src;
+    }
+
+    // Zamknij modal
+    function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none";
+    }
+</script>
+
 </body>
 </html>
