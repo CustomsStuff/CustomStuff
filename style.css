@@ -109,9 +109,9 @@ body {
     text-align: center;
     padding: 1rem 0;
 }
-/* Modal - całe okno */
+/* Modal */
 .modal {
-    display: none; /* Ukryte domyślnie */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -122,12 +122,13 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Ciemne tło */
 }
 
-/* Treść zdjęcia w modalu */
+/* Zdjęcie w modalu */
 .modal-content {
     display: block;
     margin: auto;
     max-width: 90%;
     max-height: 90%;
+    border-radius: 10px;
 }
 
 /* Przycisk zamykania */
@@ -140,4 +141,12 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+/* Efekt powiększania na hover */
+.zoomable {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
 
+.zoomable:hover {
+    transform: scale(1.05);
+}
