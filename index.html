@@ -221,7 +221,7 @@
 
 
 <!-- Cart Sidebar -->
-<div id="cartSidebar" class="cart-sidebar">
+<div id="cartSidebar" class="cart-sidebar" style="display: block;">
     <h2>Koszyk</h2>
     <ul id="cartItems" class="cart-items"></ul>
     <button id="closeCart" class="close-cart">Zamknij</button>
@@ -245,9 +245,6 @@
                 const listItem = document.createElement("li");
                 listItem.innerText = `${productName} - ${productPrice}`;
                 cartItems.appendChild(listItem);
-                
-                // Show the cart sidebar
-                cartSidebar.style.display = "block";
             });
         });
 
