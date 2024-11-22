@@ -232,3 +232,10 @@ function showPreviousImage() {
     display: block !important;
     visibility: visible !important;
 }
+
+.modal-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
