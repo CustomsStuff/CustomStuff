@@ -212,7 +212,18 @@ function showPreviousImage() {
     color: #ccc;
 }
 
-.paypal-form {
+.add-to-cart {
     margin-top: 10px;
-    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #005500;
 }
