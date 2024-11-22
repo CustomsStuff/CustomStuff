@@ -219,41 +219,14 @@
     }
 </script>
 
-
-<!-- Cart Sidebar -->
-<div id="cartSidebar" class="cart-sidebar" style="display: block;">
-    <h2>Koszyk</h2>
-    <ul id="cartItems" class="cart-items"></ul>
-    <button id="closeCart" class="close-cart">Zamknij</button>
-</div>
-
 <script>
-    // Cart functionality
-    document.addEventListener("DOMContentLoaded", () => {
-        const cartSidebar = document.getElementById("cartSidebar");
-        const cartItems = document.getElementById("cartItems");
-        const closeCartButton = document.getElementById("closeCart");
-
-        // Add to Cart button click handler
-        document.querySelectorAll(".add-to-cart").forEach(button => {
-            button.addEventListener("click", (event) => {
-                const product = event.target.closest(".product-item");
-                const productName = product.querySelector("h3").innerText;
-                const productPrice = product.querySelector("p").innerText;
-                
-                // Add item to cart
-                const listItem = document.createElement("li");
-                listItem.innerText = `${productName} - ${productPrice}`;
-                cartItems.appendChild(listItem);
-            });
-        });
-
-        // Close cart button click handler
-        closeCartButton.addEventListener("click", () => {
-            cartSidebar.style.display = "none";
-        });
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const kubkiSection = document.getElementById("kubki");
+    if (kubkiSection) {
+        kubkiSection.style.display = "block";
+        kubkiSection.style.visibility = "visible";
+    }
+});
 </script>
-
 </body>
 </html>
