@@ -234,8 +234,12 @@ function showPreviousImage() {
 }
 
 .modal-content {
-    position: relative;
+    display: block;
+    position: fixed;
     top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; /* Remove any auto margins */
+    max-width: 90%;
+    max-height: 90%;
 }
