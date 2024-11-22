@@ -219,9 +219,12 @@ function showPreviousImage() {
     transform: translate(-50%, -50%);
     max-width: 90%;
     max-height: 90%;
+    width: auto;
+    height: auto;
     display: block;
     margin: 0;
     z-index: 1001;
+    object-fit: contain; /* Ensure the image scales while maintaining aspect ratio */
 }
 
 .modal {
@@ -232,6 +235,6 @@ function showPreviousImage() {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden; /* Prevent scrolling within the modal */
     background-color: rgba(0, 0, 0, 0.8); /* Ciemne tło */
 }

@@ -178,9 +178,13 @@
         const modalImg = document.getElementById("modalImage");
         modal.style.display = "block";
         modalImg.src = src;
+        modalImg.style.position = "fixed";
         modalImg.style.top = "50%";
         modalImg.style.left = "50%";
         modalImg.style.transform = "translate(-50%, -50%)";
+        modalImg.style.maxWidth = "90%";
+        modalImg.style.maxHeight = "90%";
+        modalImg.style.objectFit = "contain";
     }
 
     function closeModal() {
