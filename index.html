@@ -130,7 +130,7 @@
                 </div>
 		<!-- Modal (ukryte okno) -->
 		<div id="imageModal" class="modal">
-    	<span class="close" onclick="closeModal()">&times;</span>
+    	
     	<img class="modal-content" id="modalImage">
 		</div>
             </div>
@@ -173,24 +173,35 @@
 
 
 <script>
-    function openModal(src) {
+    document.addEventListener("DOMContentLoaded", () => {
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImage");
-        modal.style.display = "block";
-        modalImg.src = src;
-        modalImg.style.position = "fixed";
-        modalImg.style.top = "50%";
-        modalImg.style.left = "50%";
-        modalImg.style.transform = "translate(-50%, -50%)";
-        modalImg.style.maxWidth = "90%";
-        modalImg.style.maxHeight = "90%";
-        modalImg.style.objectFit = "contain";
-    }
 
-    function closeModal() {
-        const modal = document.getElementById("imageModal");
-        modal.style.display = "none";
-    }
+        // Open the modal
+        function openModal(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+            modalImg.style.position = "fixed";
+            modalImg.style.top = "50%";
+            modalImg.style.left = "50%";
+            modalImg.style.transform = "translate(-50%, -50%)";
+            modalImg.style.maxWidth = "90%";
+            modalImg.style.maxHeight = "90%";
+            modalImg.style.objectFit = "contain";
+        }
+
+        // Close the modal when clicking outside the image
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Attach the openModal function to all zoomable images
+        document.querySelectorAll(".zoomable").forEach((img) => {
+            img.addEventListener("click", () => openModal(img.src));
+        });
+    });
 </script>
 
 </body>
