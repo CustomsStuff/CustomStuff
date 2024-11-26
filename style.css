@@ -217,3 +217,16 @@ form {
     margin-top: 10px;
     text-align: center;
 }
+
+
+.paypal-floating {
+    position: fixed;
+    right: 10px; /* Distance from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to vertical center */
+    z-index: 1000; /* Ensure it appears above other elements */
+    background: #fff; /* Optional background */
+    padding: 10px; /* Optional padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-radius: 5px; /* Optional rounded corners */
+}
