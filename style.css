@@ -230,25 +230,3 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
     border-radius: 5px; /* Optional rounded corners */
 }
-
-.cart-button {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #008000;
-    color: #fff;
-    padding: 15px 30px; /* Zwiększenie przycisku o 50% */
-    font-size: 18px; /* Większy tekst */
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-.cart-button:hover {
-    background-color: #005500;
-}
